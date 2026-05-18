@@ -1,5 +1,5 @@
 /* 전체 기사 AI 검사표 */
-function AiReportCard({ aiReport, overallRisk }) {
+function AiReportCard({ aiReport }) {
   return (
     <div className="card">
       <h3>전체 기사 AI 검사표</h3>
@@ -13,15 +13,6 @@ function AiReportCard({ aiReport, overallRisk }) {
       <p><b>판단 이유:</b> {aiReport.reason}</p>
       <p><b>Perplexity 신호:</b> {aiReport.perplexity_like_signal}</p>
       <p><b>Burstiness 신호:</b> {aiReport.burstiness_signal}</p>
-
-      <hr />
-
-      <div className="score-box">
-        <span>전체 위험도</span>
-        <strong>{overallRisk.score}/100</strong>
-      </div>
-
-      <p><b>등급:</b> {overallRisk.label} ({overallRisk.level}/5)</p>
     </div>
   );
 }
