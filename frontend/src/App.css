@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background: #0b132b; /* 기존에 바꾼 짙은 남색 */
+  background: #0b132b;
   color: #000000;
   font-family: Arial, sans-serif;
 }
@@ -17,6 +17,7 @@ body {
 
 .header {
   margin-bottom: 24px;
+  color: white;
 }
 
 .header h1 {
@@ -45,6 +46,10 @@ body {
   color: white;
   font-weight: bold;
   cursor: pointer;
+}
+
+.url-box button:hover {
+  background: #111;
 }
 
 .loading {
@@ -85,20 +90,30 @@ body {
   font-size: 16px;
 }
 
+/* 문장 단위 하이라이트 */
 .highlight {
-  padding: 10px;
-  border-radius: 10px;
+  display: inline;
+  padding: 3px 5px;
+  border-radius: 6px;
+  line-height: 1.9;
+  font-weight: 600;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .risk-badge {
   display: inline-block;
-  margin-left: 8px;
-  padding: 3px 8px;
+  margin-left: 6px;
+  margin-right: 4px;
+  padding: 2px 6px;
   border-radius: 999px;
   color: white;
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  vertical-align: middle;
 }
 
+/* 위험도 색상 */
 .level-1 {
   background: #d8f3dc;
 }
@@ -135,12 +150,51 @@ body {
   font-size: 24px;
 }
 
+/* 검증 위험도 영양성분표 */
+.nutrition-guide {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.nutrition-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nutrition-card {
+  background: #fafafa;
+  border-radius: 16px;
+  padding: 18px 18px 16px 18px;
+  border-left: 6px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
 .nutrition-row {
   display: grid;
-  grid-template-columns: 130px 1fr 40px;
-  gap: 10px;
+  grid-template-columns: 180px 1fr 60px;
+  gap: 14px;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.nutrition-name {
+  font-weight: 700;
+}
+
+.nutrition-score {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.nutrition-detail {
+  margin: 8px 0 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
 }
 
 .bar {
@@ -152,8 +206,10 @@ body {
 
 .bar-fill {
   height: 100%;
+  border-radius: 999px;
 }
 
+/* 검증 문장 / 관련 기사 카드 */
 .risk-card,
 .query-card {
   background: #fafafa;
@@ -193,6 +249,11 @@ body {
   text-decoration: none;
 }
 
+.query-card a:hover {
+  text-decoration: underline;
+}
+
+/* 반응형 */
 @media (max-width: 900px) {
   .layout {
     grid-template-columns: 1fr;
@@ -200,5 +261,14 @@ body {
 
   .url-box {
     flex-direction: column;
+  }
+
+  .nutrition-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .nutrition-score {
+    text-align: left;
   }
 }
