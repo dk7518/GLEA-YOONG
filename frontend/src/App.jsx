@@ -37,7 +37,10 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>AI 뉴스 검증 Copilot</h1>
+        <h1 style={{ color: "white" }}>
+    기사를 <span style={{ color: "#eaff00" }}>
+      비판적으로</span> 읽는 습관
+  </h1>
         <p>
           기사 URL을 입력하면 AI 작성 가능성, 검증 위험도, 관련 기사
           크로스체크 키워드를 분석합니다.

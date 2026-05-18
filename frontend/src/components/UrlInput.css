@@ -1,0 +1,40 @@
+.url-box {
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.url-box input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #ffffff;
+  outline: none;
+}
+
+.url-box input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.url-box button {
+  padding: 10px 16px;
+  border-radius: 10px;
+
+  border: none;
+  background: #2dd4bf;
+  color: #06231f;
+
+  font-weight: 700;
+  cursor: pointer;
+}
