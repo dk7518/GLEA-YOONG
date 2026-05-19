@@ -80,7 +80,7 @@ def default_nutrition_label():
     }
 
 
-def analyze_article_with_gpt(title: str, text: str, url: str):
+def analyze_article_with_gemini(title: str, text: str, url: str):
     """
     함수 이름은 기존 코드 호환을 위해 gpt로 유지하지만,
     실제 호출 모델은 Gemini API를 사용한다.
