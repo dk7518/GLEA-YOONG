@@ -2,7 +2,7 @@
 function RelatedQueries({ queries = [] }) {
   return (
     <div className="card">
-      <h3>관련 내용 다른 기사 추천</h3>
+      <h3>크로스체크 키워드 검색</h3>
 
       {queries.length === 0 && <p>추천 검색어가 없습니다.</p>}
 
